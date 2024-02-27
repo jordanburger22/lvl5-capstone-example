@@ -4,9 +4,11 @@ const morgan = require('morgan')
 const app = express()
 require('dotenv').config()
 const PORT = process.env.PORT
+const path = require('path')
 
 app.use(express.json())
 app.use(morgan('dev'))
+app.use(express.static(path.join(__dirname, 'client', 'dist')))
 
 const connectToDb = async () => {
     try {
@@ -26,5 +28,9 @@ app.use((err, req, res, next) => {
 
     return res.send({errMsg: err.message})
 })
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+});
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
