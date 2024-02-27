@@ -162,4 +162,8 @@ textarea{
   .add-goal-form input, .add-goal-form textarea {
     width: 80vw; /* Adjusting input and textarea width for smaller screens */
   }
+
+  .goal-list{
+    width: 80vw;
+  }
 }
