@@ -145,3 +145,21 @@ textarea{
   border: white solid .2px;
   border-radius: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  .welcome-message, .add-goal-form {
+    width: 90vw; /* Adjusting width for smaller screens */
+  }
+
+  .welcome-message > h1 {
+    font-size: 2em; /* Decreasing font size for smaller screens */
+  }
+
+  .welcome-message > p {
+    font-size: 1.5em; /* Decreasing font size for smaller screens */
+  }
+
+  .add-goal-form input, .add-goal-form textarea {
+    width: 80vw; /* Adjusting input and textarea width for smaller screens */
+  }
+}
