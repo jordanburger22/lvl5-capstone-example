@@ -44,7 +44,7 @@ const AddGoal = () => {
                 />
                 <textarea
                     rows={15}
-                    placeholder="Goal Description"
+                    placeholder="Goal Plan"
                     name="goalDescription"
                     value={formData.goalDescription}
                     onChange={handleChange}
